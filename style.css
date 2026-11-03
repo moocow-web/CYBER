@@ -26,7 +26,7 @@ background: repeating-linear-gradient(
 ), radial-gradient(
     ellipse at center,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 50%, 
+    rgba(0, 0, 0, 0) 60%, 
     rgba(0, 0, 0, 1) 80%
 );
     pointer-events: none; 
@@ -40,9 +40,9 @@ background: repeating-linear-gradient(
     width: 100vw;
     height: 10px;
     background: linear-gradient(
-        to bottom,
+        to top,
         rgba(0, 255, 42, .4), 1px,
-        transparent 40px
+        transparent 60px
     );
     pointer-events: none; 
     z-index: 1;
@@ -112,14 +112,14 @@ p {
     font-size: x-small;
     color: #00ff2a;
     position: absolute;
-    top: 900px;
+    top: 1200px;
 
 }
 
 /*extends page, to allow for better testing*/
 .page-extender {
     position: relative;
-    top: 500px;
+    top: 900px;
     height: 1px;
 }
 /*only used in the "dashboard" page, not main*/
@@ -146,7 +146,7 @@ input::placeholder {
 .button {
     display: block;
     margin: 0 auto;
-    margin-top: 25px;
+    margin-top: 50px;
     text-align: center;
     height: 50px;
     width: 800px !important;
@@ -158,6 +158,7 @@ input::placeholder {
     box-shadow: 0 0 10px #00ff2a;
     border: none;
 }
+
 /*moves scanline*/
 @keyframes scanlineAnimation {
     0% {
@@ -167,3 +168,38 @@ input::placeholder {
         transform: translateY(100vh);
     }
 }
+
+/*faq styling, not proud of this mess of styling*/
+.faqQ {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    text-align: left;
+    margin-bottom: 25px;
+    width: 800px;
+}
+.faqQ h3 {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff2a;
+}
+.faqA {
+    position: absolute;
+    text-align: left;
+    width: 800px;
+    top: 760px;
+    left: 50vw;
+    margin-bottom: 25px;
+}
+.faqA button {
+    display: block;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff2a;
+    background: none;
+    outline: 0;
+    box-shadow: none;
+    border: none;
+    margin-bottom: 7.5px;
+}
+
